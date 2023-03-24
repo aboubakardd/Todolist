@@ -3,6 +3,7 @@
 const inputTask = document.forms['frmTODO'].task;
 const btAdd = document.forms['frmTODO'].btAdd;
 const taskList = document.getElementById('taskList');
+const divNotification = document.getElementById('notification');
 
 //console.log(inputTask);
 
@@ -14,7 +15,9 @@ btAdd.onclick = function() {
 	//Validation des données
 	if(task!= '' && task.length>=3) {
 		divNotification.innerHTML = '';
+		
 		//Traitement des données
+		taskList.innerHTML += '<li>'+task+'</li>';
 		
 	} else {
 		//Notification des erreurs
